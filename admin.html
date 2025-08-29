@@ -76,11 +76,13 @@
             font-weight: 600;
         }
 
+
+
         /* Main Content */
         .admin-content {
             padding: 100px 15px 20px 15px;
             max-width: 1200px;
-            margin: 0 auto;
+                margin: 0 auto;
         }
 
         /* Section Styling */
@@ -107,31 +109,9 @@
             margin-top: 25px;
         }
 
-        /* Orders section specific */
-        #orders .card {
-            margin-top: 25px;
-        }
 
-        #orders .time-btn {
-            padding: 8px 16px;
-                border: 1px solid var(--border-color);
-            background: white;
-            color: var(--text-color);
-            border-radius: 6px;
-                cursor: pointer;
-                transition: all 0.2s ease;
-            font-size: 0.9rem;
-            }
 
-        #orders .time-btn.active {
-            background: var(--primary-red);
-                color: white;
-            border-color: var(--primary-red);
-        }
-
-        #orders .time-btn:hover:not(.active) {
-            background: var(--surface-color);
-        }
+        
 
         /* Slider section specific */
         #slider .card {
@@ -157,7 +137,7 @@
         }
 
         .admin-section h3 {
-                font-size: 1.3rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--text-color);
             font-weight: 600;
@@ -415,9 +395,9 @@
             right: 0;
             z-index: 1000;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 12px 10px;
             border-top: 1px solid var(--border-color);
         }
 
@@ -428,9 +408,10 @@
             text-decoration: none;
             color: var(--muted-color);
                 transition: all 0.3s ease;
-            padding: 8px 12px;
+            padding: 6px 8px;
             border-radius: 8px;
-            min-width: 60px;
+            min-width: 50px;
+            flex: 1;
         }
 
         .admin-nav-item:hover {
@@ -444,12 +425,12 @@
         }
 
         .admin-nav-item i {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
+            font-size: 1.1rem;
+            margin-bottom: 3px;
         }
 
         .admin-nav-item span {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
         }
 
@@ -487,6 +468,8 @@
             .admin-header .admin-profile {
                 font-size: 0.8rem;
             }
+
+
 
             .admin-section {
                 padding-top: 55px;
@@ -600,22 +583,9 @@
                 display: block;
             }
 
-            .time-btn {
-                margin: 5px;
-                min-width: 80px;
-                padding: 10px 16px;
-                font-size: 0.9rem;
-                font-weight: 600;
-                border-radius: 20px;
-                transition: all 0.3s ease;
-            }
 
-            .time-btn.active {
-                background: var(--primary-red);
-                color: white;
-                transform: scale(1.05);
-                box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
-            }
+
+
 
             /* Mobile Form Layout */
             form input, form textarea, form select {
@@ -632,20 +602,20 @@
 
             /* Mobile Navigation */
             .admin-bottom-nav {
-                padding: 12px 0;
+                padding: 10px 5px;
             }
 
             .admin-nav-item {
-                min-width: 50px;
-                padding: 6px 8px;
+                min-width: 45px;
+                padding: 5px 4px;
             }
 
             .admin-nav-item i {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .admin-nav-item span {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
             }
 
             /* Better mobile touch targets */
@@ -921,7 +891,8 @@
         .order-progress-step.completed .progress-step-icon {
             background: var(--primary-red);
             color: white;
-            box-shadow: 0 2px 8px rgba(231, 74, 59, 0.3);
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
         }
 
         .order-progress-step.completed .progress-step-label {
@@ -932,7 +903,8 @@
         .order-progress-step.current .progress-step-icon {
             background: var(--primary-red);
             color: white;
-            box-shadow: 0 2px 8px rgba(231, 74, 59, 0.3);
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
             animation: pulse 2s infinite;
         }
 
@@ -945,6 +917,401 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        /* Enhanced Mobile Responsiveness for All Tabs */
+        @media (max-width: 768px) {
+            /* Enhanced Order Tab Mobile Responsiveness */
+            .order-card {
+                margin-bottom: 15px !important;
+                padding: 12px !important;
+            }
+
+            .order-card > div {
+                flex-direction: column !important;
+                gap: 12px !important;
+                text-align: center;
+            }
+
+            .order-card img {
+                width: 80px !important;
+                height: 80px !important;
+                margin: 0 auto !important;
+            }
+
+            .order-status-badge {
+                font-size: 0.7rem !important;
+                padding: 6px 10px !important;
+                min-width: 60px !important;
+            }
+
+            .update-status-btn {
+                width: 36px !important;
+                height: 36px !important;
+                margin: 0 auto !important;
+            }
+
+            /* Enhanced Products Tab Mobile Responsiveness */
+            .admin-product-image {
+                width: 60px !important;
+                height: 60px !important;
+                margin: 0 auto !important;
+            }
+
+            /* Enhanced Slider Tab Mobile Responsiveness */
+            .admin-slider-image {
+                width: 80px !important;
+                height: 50px !important;
+                margin: 0 auto !important;
+            }
+
+            /* Enhanced Messages Tab Mobile Responsiveness */
+            .message-cell {
+                text-align: center !important;
+                padding: 8px !important;
+            }
+
+            /* Enhanced Order Progress Steps for Mobile */
+            .order-progress-bar {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                align-items: center;
+                justify-content: center;
+                max-width: 350px;
+            }
+
+            .order-progress-step {
+                flex-direction: column;
+                text-align: center;
+                min-width: 50px;
+            }
+
+            .progress-step-icon {
+                margin-bottom: 8px;
+            }
+
+            .progress-step-label {
+                font-size: 0.8rem;
+            }
+
+            /* Enhanced Modal Responsiveness */
+            #order-details-modal .card {
+                width: 95% !important;
+                margin: 10px auto !important;
+                padding: 20px !important;
+                max-height: 85vh !important;
+            }
+
+            #order-details-modal .card > div {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            #status-update-modal .card {
+                width: 90% !important;
+                margin: 20px auto !important;
+                padding: 20px !important;
+            }
+
+            #product-manage-modal .card,
+            #add-slider-image-modal .card {
+                width: 95% !important;
+                margin: 20px auto !important;
+                padding: 20px !important;
+            }
+
+            /* Enhanced Table Container Responsiveness */
+            #product-table-container,
+            #order-table-container,
+            #today-orders-container,
+            #slider-image-table-container,
+            #messages-table-container {
+                overflow-x: hidden;
+                padding: 0 5px;
+            }
+        }
+
+        /* Extra Small Device Responsiveness */
+        @media (max-width: 480px) {
+            /* Extra small device order card adjustments */
+            .order-card {
+                padding: 10px !important;
+            }
+
+            .order-card img {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .order-status-badge {
+                font-size: 0.65rem !important;
+                padding: 4px 8px !important;
+            }
+
+            .update-status-btn {
+                width: 32px !important;
+                height: 32px !important;
+            }
+
+            /* Extra small device product image adjustments */
+            .admin-product-image {
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            /* Extra small device slider image adjustments */
+            .admin-slider-image {
+                width: 60px !important;
+                height: 40px !important;
+            }
+        }
+
+        .progress-step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--surface-dark-color);
+            color: var(--muted-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .progress-step-label {
+            font-size: 0.8rem;
+            color: var(--muted-color);
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Base Order Progress Bar Styles */
+        .order-progress-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .order-progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 0px;
+            background: transparent;
+            z-index: 1;
+        }
+
+        .order-progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            background: var(--surface-color);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Linear Progress Bar with Connected Steps */
+        .order-progress-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            position: relative;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .order-progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            right: 50px;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 1;
+            transform: translateY(-50%);
+            border-radius: 2px;
+        }
+
+        .order-progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            padding: 8px;
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .progress-step-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            border: 4px solid #e0e0e0;
+            position: relative;
+            font-size: 1.2rem;
+        }
+
+        .progress-step-label {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        /* Active and Completed Step Styles */
+        .order-progress-step.completed .progress-step-icon {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
+        }
+
+        .order-progress-step.completed .progress-step-label {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .order-progress-step.current .progress-step-icon {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .order-progress-step.current .progress-step-label {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        /* Progress Line Fill */
+        .order-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            height: 0px;
+            background: transparent;
+            z-index: 1;
+            transform: translateY(-50%);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+
+        /* Progress Line Fill for Different Statuses */
+        .order-progress-bar[data-progress="25"]::after { width: 25%; }
+        .order-progress-bar[data-progress="50"]::after { width: 50%; }
+        .order-progress-bar[data-progress="75"]::after { width: 75%; }
+        .order-progress-bar[data-progress="100"]::after { width: 100%; }
+
+        /* Individual Circular Progress Steps - Clean Design */
+        .order-progress-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            position: relative;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+            gap: 25px;
+        }
+
+        .order-progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            padding: 4px;
+            border-radius: 8px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .progress-step-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .progress-step-label {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        /* Active and Completed Step Styles */
+        .order-progress-step.completed .progress-step-icon {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
+        }
+
+        .order-progress-step.completed .progress-step-label {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .order-progress-step.current .progress-step-icon {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(231, 74, 59, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .order-progress-step.current .progress-step-label {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        /* Enhanced Mobile Responsiveness for All Tabs */
     </style>
 </head>
 <body>
@@ -955,8 +1322,7 @@
             <span style="font-weight: 700; font-size: 1.2rem; color: white;">Chaudhary Kirana Store</span>
         </div>
         <div class="admin-profile">
-            <i class="fas fa-user-shield" style="color: var(--primary-red); font-size: 1.2rem;"></i>
-            <span style="margin-left: 8px; font-weight: 600; color: var(--primary-red);">Admin Panel</span>
+            <i id="admin-shield-icon" class="fas fa-user-shield" style="color: var(--primary-red); font-size: 1.2rem; transition: color 0.3s ease;" title="Checking connection..."></i>
         </div>
     </header>
 
@@ -995,16 +1361,36 @@
                 <section id="orders" class="admin-section">
                     <h2>Orders</h2>
                     
+
+                    
                     <!-- Orders Management Section -->
                     <div class="card">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                             <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-color);">Order List</h3>
                             <div style="display: flex; gap: 8px;">
-                                <button class="time-btn" data-period="monthly">Monthly</button>
-                                <button class="time-btn" data-period="weekly">Weekly</button>
-                                <button class="time-btn active" data-period="daily">Daily</button>
+                                <span style="color: var(--muted-color); font-size: 0.9rem;">All orders</span>
                             </div>
                         </div>
+                        
+                        <!-- Search Section -->
+                        <div style="margin-bottom: 20px; padding: 15px; background: var(--surface-dark-color); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                                <i class="fas fa-search" style="color: var(--primary-red); font-size: 1.1rem;"></i>
+                                <h4 style="margin: 0; font-size: 1rem; font-weight: 600; color: var(--text-color);">Search Orders</h4>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+                                <div style="position: relative; flex: 1; min-width: 250px;">
+                                    <input type="text" id="order-search-input" placeholder="Search by Order ID or Customer Name..." style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 0.9rem; background: white; transition: all 0.3s ease; box-sizing: border-box;">
+                                </div>
+                                <button id="order-clear-search-btn" style="background: var(--surface-dark-color); color: var(--muted-color); padding: 10px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-size: 0.9rem;">
+                                    <i class="fas fa-times" style="margin-right: 6px;"></i>Clear
+                                </button>
+                            </div>
+                            <div id="search-results-info" style="margin-top: 10px; font-size: 0.85rem; color: var(--muted-color); display: none;">
+                                <!-- Search results info will be shown here -->
+                            </div>
+                        </div>
+                        
                         <div id="order-table-container">
                             <!-- Order table will be loaded here -->
                             <p style="text-align: center; color: var(--muted-color);">No orders to display.</p>
@@ -1196,13 +1582,16 @@
         }
 
         // Connection status indicator
-        const connectionStatus = document.getElementById('connection-status');
         function updateConnectionStatus(connected) {
-            if (connectionStatus) {
+            const adminShieldIcon = document.getElementById('admin-shield-icon');
+            
+            if (adminShieldIcon) {
                 if (connected) {
-                    connectionStatus.innerHTML = '<i class="fas fa-circle" style="color: #28a745;"></i> Connected';
+                    adminShieldIcon.style.color = '#28a745'; // Green for connected
+                    adminShieldIcon.title = 'Connected to Firebase';
                 } else {
-                    connectionStatus.innerHTML = '<i class="fas fa-circle" style="color: #dc3545;"></i> Disconnected';
+                    adminShieldIcon.style.color = '#dc3545'; // Red for disconnected
+                    adminShieldIcon.title = 'Disconnected from Firebase';
                 }
             }
         }
@@ -1318,7 +1707,7 @@
                         // Trigger initial stats fetch if on today-orders
         if (window.location.hash === '#today-orders') {
             // No dashboard stats needed
-        }
+                }
             } else {
                 // User is signed out, show login modal and hide admin content
                 adminAuthModal.style.display = 'flex';
@@ -1513,7 +1902,11 @@
                 } else if (hash === 'products') {
                     // Products will be loaded automatically via Firebase listener
                 } else if (hash === 'orders') {
-                    // Orders will be loaded automatically via Firebase listener
+                    // Load all orders when navigating to orders section
+                    onValue(ref(database, 'orders'), (snapshot) => {
+                        const allOrders = snapshot.val() || {};
+                        renderOrderTable(allOrders);
+                    }, { onlyOnce: true });
                 } else if (hash === 'slider') {
                     // Slider will be loaded automatically via Firebase listener
                 } else if (hash === 'messages') {
@@ -1545,6 +1938,13 @@
                 if (hash === 'today-orders') {
                     setTimeout(() => {
                         renderTodayOrders();
+                    }, 100);
+                } else if (hash === 'orders') {
+                    setTimeout(() => {
+                        onValue(ref(database, 'orders'), (snapshot) => {
+                            const allOrders = snapshot.val() || {};
+                            renderOrderTable(allOrders);
+                        }, { onlyOnce: true });
                     }, 100);
                 }
             }
@@ -1800,8 +2200,8 @@
 
         async function deleteProduct(productId) {
             // Product deletion confirmed - no confirm dialog needed
-            const productRef = ref(database, `products/${productId}`);
-            await remove(productRef);
+                const productRef = ref(database, `products/${productId}`);
+                await remove(productRef);
         }
 
         // Show skeleton loading initially for products
@@ -1828,6 +2228,13 @@
 
         // --- Order Management ---
         const orderTableContainer = document.getElementById('order-table-container');
+        const orderSearchInput = document.getElementById('order-search-input');
+        const orderSearchBtn = document.getElementById('order-search-btn');
+        const orderClearSearchBtn = document.getElementById('order-clear-search-btn');
+        const searchResultsInfo = document.getElementById('search-results-info');
+        
+        let allOrders = {}; // Store all orders for search functionality
+        let filteredOrders = {}; // Store filtered orders
 
         function renderOrderProducts(items) {
             if (!items || !Array.isArray(items) || items.length === 0) {
@@ -1870,6 +2277,9 @@
                 orderTableContainer.innerHTML = '<p style="text-align: center; color: var(--muted-color);">No orders to display.</p>';
                 return;
             }
+            
+            // Store all orders for search functionality
+            window.allOrders = allOrders;
 
             let tableHtml = `
                 <div style="display: grid; gap: 15px; padding: 10px; margin-top: 10px;">
@@ -1949,6 +2359,88 @@
             });
         }
 
+        // Search functionality for orders
+        function searchOrders(searchTerm) {
+            if (!searchTerm || searchTerm.trim() === '') {
+                // If search is empty, show all orders
+                renderOrderTable(window.allOrders);
+                searchResultsInfo.style.display = 'none';
+                return;
+            }
+
+            const searchLower = searchTerm.toLowerCase().trim();
+            const filteredOrders = {};
+
+            // Search through all orders
+            for (const userId in window.allOrders) {
+                for (const orderId in window.allOrders[userId]) {
+                    const order = window.allOrders[userId][orderId];
+                    
+                    // Search by Order ID
+                    if (orderId.toLowerCase().includes(searchLower)) {
+                        if (!filteredOrders[userId]) filteredOrders[userId] = {};
+                        filteredOrders[userId][orderId] = order;
+                        continue;
+                    }
+                    
+                    // Search by Customer Name
+                    if (order.shippingName && order.shippingName.toLowerCase().includes(searchLower)) {
+                        if (!filteredOrders[userId]) filteredOrders[userId] = {};
+                        filteredOrders[userId][orderId] = order;
+                        continue;
+                    }
+                    
+                    // Search by Customer Mobile
+                    if (order.shippingMobile && order.shippingMobile.includes(searchTerm)) {
+                        if (!filteredOrders[userId]) filteredOrders[userId] = {};
+                        filteredOrders[userId][orderId] = order;
+                        continue;
+                    }
+                }
+            }
+
+            // Show filtered results
+            renderOrderTable(filteredOrders);
+            
+            // Show search results info
+            const resultCount = Object.keys(filteredOrders).length > 0 ? 
+                Object.values(filteredOrders).reduce((total, userOrders) => total + Object.keys(userOrders).length, 0) : 0;
+            
+            if (resultCount > 0) {
+                searchResultsInfo.innerHTML = `<i class="fas fa-check-circle" style="color: #28a745; margin-right: 5px;"></i>Found ${resultCount} order(s) matching "${searchTerm}"`;
+                searchResultsInfo.style.display = 'block';
+            } else {
+                searchResultsInfo.innerHTML = `<i class="fas fa-info-circle" style="color: #ffc107; margin-right: 5px;"></i>No orders found matching "${searchTerm}"`;
+                searchResultsInfo.style.display = 'block';
+            }
+        }
+
+        // Add event listeners for search functionality
+        if (orderSearchBtn) {
+            orderSearchBtn.addEventListener('click', () => {
+                const searchTerm = orderSearchInput.value;
+                searchOrders(searchTerm);
+            });
+        }
+
+        if (orderClearSearchBtn) {
+            orderClearSearchBtn.addEventListener('click', () => {
+                orderSearchInput.value = '';
+                searchResultsInfo.style.display = 'none';
+                renderOrderTable(window.allOrders);
+            });
+        }
+
+        // Add enter key support for search input
+        if (orderSearchInput) {
+            orderSearchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const searchTerm = orderSearchInput.value;
+                    searchOrders(searchTerm);
+                }
+            });
+        }
+
         async function updateOrderStatus(userId, orderId, newStatus) {
             const orderRef = ref(database, `orders/${userId}/${orderId}`);
             await update(orderRef, { status: newStatus });
@@ -1957,10 +2449,10 @@
 
         async function deleteOrder(userId, orderId) {
             // Order deletion confirmed - no confirm dialog needed
-            const orderRef = ref(database, `orders/${userId}/${orderId}`);
-            await remove(orderRef);
-            console.log(`Order ${orderId} deleted.`);
-        }
+                const orderRef = ref(database, `orders/${userId}/${orderId}`);
+                await remove(orderRef);
+                console.log(`Order ${orderId} deleted.`);
+            }
 
         // Function to render today's orders
         function renderTodayOrders() {
@@ -2099,8 +2591,6 @@
                 onValue(ref(database, 'orders'), (snapshot) => {
                     const allOrders = snapshot.val() || {};
                     renderOrderTable(allOrders);
-                    // Apply default daily filter
-                    filterOrdersByPeriod('daily');
                 }, { onlyOnce: true });
             }
         });
@@ -2524,8 +3014,8 @@
                                     </div>
                                 </div>
                                 <div style="text-align: right;">
-                                    <div style="font-weight: 600; color: var(--primary-red);">₹{(item.price * item.qty).toFixed(2)}</div>
-                                    <div style="color: var(--muted-color); font-size: 0.9rem;">₹{item.price.toFixed(2)} each</div>
+                                    <div style="font-weight: 600; color: var(--primary-red);">₹${(item.price * item.qty).toFixed(2)}</div>
+                                    <div style="color: var(--muted-color); font-size: 0.9rem;">₹${item.price.toFixed(2)} each</div>
                                 </div>
                             </div>
                         `).join('')}
